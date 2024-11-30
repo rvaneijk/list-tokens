@@ -24,10 +24,14 @@ This script analyzes and displays tokens from a GGUF model file's vocabulary sec
 
 ## Options:
   `--count N`            Number of tokens to display (default: 50)
+  
   `--skip N`             Number of tokens to skip before starting display (default: 0)
+  
   `--window N`           Show N tokens centered around the skip position
+  
                       For example, `--skip 1000 --window 150` will show 150 tokens
                       centered around position 1000
+					  
   `-h, --help`          Show this help message
 
 ## Examples:
@@ -43,7 +47,22 @@ This script analyzes and displays tokens from a GGUF model file's vocabulary sec
 ## Output Format:
        - Token number in vocabulary
   Offset - File offset in hexadecimal
+  
   Len    - Length of token in bytes
+  
   Raw Hex- Hexadecimal representation of token data
+  
   IDs    - Potential token IDs found near token
+  
   Text   - Decoded token text
+
+### Options:
+--count N  Number of tokens to display (default: 50)
+
+--skip N   Number of tokens to skip before starting display (default: 0)
+
+--window N Show N tokens centered around the skip position. 
+           For example, --skip 1000 --window 150 will show 150 tokens
+           centered around position 1000
+		   
+-h, --help Show this help message
