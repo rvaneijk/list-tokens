@@ -1,5 +1,3 @@
-Here is the README.txt content converted to a Markdown file:
-
 # GGUF TOKEN LISTER
 
 Copyright (c) 2024 Rob van Eijk
