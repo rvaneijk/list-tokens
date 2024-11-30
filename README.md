@@ -1,3 +1,7 @@
+Here is the README.txt content converted to a Markdown file:
+
+# GGUF TOKEN LISTER
+
 Copyright (c) 2024 Rob van Eijk
 
 Permission to use, copy, modify, and/or distribute this software for any 
@@ -12,35 +16,33 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR 
 PERFORMANCE OF THIS SOFTWARE.
 
-GGUF TOKEN LISTER
-
 This script analyzes and displays tokens from a GGUF model file's vocabulary section.
 
-Usage:
-  list_tokens.py [OPTIONS] FILE
+## Usage:
+  `list_tokens.py [OPTIONS] FILE`
 
-Arguments:
-  FILE                  Path to the GGUF model file
+## Arguments:
+  `FILE`                  Path to the GGUF model file
 
-Options:
-  --count N            Number of tokens to display (default: 50)
-  --skip N             Number of tokens to skip before starting display (default: 0)
-  --window N           Show N tokens centered around the skip position
-                      For example, --skip 1000 --window 150 will show 150 tokens
+## Options:
+  `--count N`            Number of tokens to display (default: 50)
+  `--skip N`             Number of tokens to skip before starting display (default: 0)
+  `--window N`           Show N tokens centered around the skip position
+                      For example, `--skip 1000 --window 150` will show 150 tokens
                       centered around position 1000
-  -h, --help          Show this help message
+  `-h, --help`          Show this help message
 
-Examples:
+## Examples:
   Show first 50 tokens:
-  list_tokens.py model.gguf
+  `list_tokens.py model.gguf`
 
   Show 100 tokens starting from position 1000:
-  list_tokens.py --count 100 --skip 1000 model.gguf
+  `list_tokens.py --count 100 --skip 1000 model.gguf`
 
   Show 150 tokens around position 1000:
-  list_tokens.py --window 150 --skip 1000 model.gguf
+  `list_tokens.py --window 150 --skip 1000 model.gguf`
 
-Output Format:
+## Output Format:
        - Token number in vocabulary
   Offset - File offset in hexadecimal
   Len    - Length of token in bytes
